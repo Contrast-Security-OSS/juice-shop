@@ -1,0 +1,21 @@
+api:
+  api_key: gW7G76sALMmGbQhqq7613lG2a7PEde3o
+  url: https://teamserver-darpa.contsec.com/Contrast
+  service_key: YRDDN9I5EDERAX44
+  user_name: agent_b47d608e-1971-4560-961c-a55bd4111b61@Alexstestorg
+
+agent:
+  service:
+    host: 127.0.0.1
+    port: 30556
+  logger:
+    level: info
+  node:
+    enable_babel: true
+    rewrite_cache:
+      enable: true
+
+protect:
+  enable: false
+assess:
+  enable: true

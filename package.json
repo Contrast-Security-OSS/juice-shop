@@ -65,6 +65,7 @@
     "protractor": "npm run e2e",
     "serve": "concurrently --kill-others \"node app\" \"cd frontend && ng serve\"",
     "start": "node app",
+    "start:contrast": "node -r @contrast/agent app",
     "test": "cd frontend && ng test --watch=false --source-map=true && cd .. && nyc --report-dir=./build/reports/coverage/server-tests mocha test/server",
     "test:server": "nyc --report-dir=./build/reports/coverage/server-tests mocha test/server",
     "test:chromium": "cd frontend && ng test --watch=false --source-map=false --browsers=ChromiumHeadless && cd .. && nyc --report-dir=./build/reports/coverage/server-tests mocha test/server",
@@ -97,6 +98,7 @@
     ]
   },
   "dependencies": {
+    "@contrast/agent": "^2.18.0",
     "body-parser": "^1.19.0",
     "check-dependencies": "^1.1.0",
     "clarinet": "^0.12.4",
