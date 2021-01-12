@@ -98,7 +98,7 @@
     ]
   },
   "dependencies": {
-    "@contrast/agent": "^2.18.0",
+    "@contrast/agent": "^3.5.0",
     "body-parser": "^1.19.0",
     "check-dependencies": "^1.1.0",
     "clarinet": "^0.12.4",
