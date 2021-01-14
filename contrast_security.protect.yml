@@ -11,9 +11,9 @@ agent:
   logger:
     level: info
   node:
-    enable_babel: true
+    enable_babel: false
     rewrite_cache:
-      enable: true
+      enable: false
 
 protect:
   enable: true
