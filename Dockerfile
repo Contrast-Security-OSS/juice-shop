@@ -5,6 +5,7 @@ RUN npm i -g typescript ts-node
 RUN npm install --production --unsafe-perm
 RUN npm dedupe
 RUN rm -rf frontend/node_modules
+RUN npx contrast-transpile ./build/app.js
 
 FROM node:16-alpine
 ARG BUILD_DATE
