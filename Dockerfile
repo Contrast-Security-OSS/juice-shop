@@ -1,4 +1,4 @@
-FROM node:22 AS installer
+FROM node:22@sha256:9059d9d7db987b86299e052ff6630cd95e5a770336967c21110e53289a877433 AS installer
 COPY . /juice-shop
 WORKDIR /juice-shop
 RUN npm i -g typescript ts-node

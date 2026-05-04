@@ -3,10 +3,21 @@ on:
   schedule:
     - cron: '30 1 * * *'
 
+permissions:
+  contents: read
+
 jobs:
   stale:
+    permissions:
+      issues: write  # for actions/stale to close stale issues
+      pull-requests: write  # for actions/stale to close stale PRs
     runs-on: ubuntu-latest
     steps:
+      - name: Harden the runner (Audit all outbound calls)
+        uses: step-security/harden-runner@a5ad31d6a139d249332a2605b85202e8c0b78450 # v2.19.1
+        with:
+          egress-policy: audit
+
       - uses: actions/stale@28ca1036281a5e5922ead5184a1bbf96e5fc984e #v9.0.0
         with:
           stale-issue-message: >
